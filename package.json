@@ -4,7 +4,7 @@
   "description": "Yeoman generator and modified generator-ng-component",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "DaftMonk/generator-sg-component",
+  "repository": "https://github.com/AngularJS-SPA-Development/generator-sg-component",
   "author": {
     "name": "Peter yun",
     "email": "",
