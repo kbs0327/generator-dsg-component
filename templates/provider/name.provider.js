@@ -6,6 +6,7 @@
     .module('<%= scriptAppName %>')
     .provider('<%= cameledName %>', <%= classedName %>);
 
+  /* @ngInject */
   function <%= classedName %>() {
 
     // Private variables

@@ -6,6 +6,7 @@
     .module('<%= scriptAppName %>')
     .config(Config);
 
+  /* @ngInject */
   function Config($stateProvider) {
     $stateProvider
       .state('<%= name %>', {

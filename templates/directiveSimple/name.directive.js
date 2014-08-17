@@ -6,6 +6,7 @@
     .module('<%= scriptAppName %>')
     .directive('<%= cameledName %>', <%= classedName %>);
 
+  /* @ngInject */
   function <%= classedName %>() {
     return {
       template: '<div></div>',

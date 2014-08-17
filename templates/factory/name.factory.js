@@ -6,6 +6,7 @@
     .module('<%= scriptAppName %>')
     .factory('<%= cameledName %>', <%= classedName %>);
 
+  /* @ngInject */
   function <%= classedName %>() {
     // Service logic
     // ...
