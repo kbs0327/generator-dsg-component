@@ -1,6 +1,7 @@
 # generator-sg-component
 
 > [Yeoman](http://yeoman.io) generator
+> Following AngularJS Style Guide : [johnpapa guide](https://github.com/johnpapa/angularjs-styleguide)
 
 
 ## Getting Started
@@ -16,7 +17,7 @@ $ npm install -g generator-sg-component
 Finally, initiate the generator:
 
 ```
-$ yo ng-component
+$ yo sg-component
 ```
 ## License
 
