@@ -1,4 +1,23 @@
-generator-sg-component
-======================
+# generator-sg-component
 
-generator-ng-component를 SurveyGorilla에 맞게 수정함. 저장소 명칭은 깃헙에서 유니크 해야함 
+> [Yeoman](http://yeoman.io) generator
+
+
+## Getting Started
+
+### Yeoman Generators
+
+To install generator-sg-component from npm, run:
+
+```
+$ npm install -g generator-sg-component
+```
+
+Finally, initiate the generator:
+
+```
+$ yo ng-component
+```
+## License
+
+MIT
