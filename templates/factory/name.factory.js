@@ -4,7 +4,7 @@
 
   angular
     .module('<%= scriptAppName %>')
-    .factory('<%= classedName %>', <%= classedName %>);
+    .factory('<%= cameledName %>', <%= classedName %>);
 
   function <%= classedName %>() {
     // Service logic

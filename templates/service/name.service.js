@@ -4,7 +4,7 @@
 
   angular
     .module('<%= scriptAppName %>')
-    .service('<%= classedName %>', <%= classedName %>);
+    .service('<%= cameledName %>', <%= classedName %>);
 
   function <%= classedName %>() {
     this.hi = function (){

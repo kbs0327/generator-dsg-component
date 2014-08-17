@@ -4,9 +4,9 @@
 
   angular
     .module('<%= scriptAppName %>')
-    .directive('<%= cameledName %>', <%= classedName %>Drtv);
+    .directive('<%= cameledName %>', <%= classedName %>);
 
-  function <%= classedName %>Drtv() {
+  function <%= classedName %>() {
     return {
       templateUrl: '<%= htmlUrl %>',
       restrict: 'EA',

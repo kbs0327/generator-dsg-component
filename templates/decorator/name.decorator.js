@@ -7,7 +7,7 @@
     .config(Config);
 
   function Config($provide) {
-    $provide.decorator('<%= classedName %>', function ($delegate) {
+    $provide.decorator('<%= cameledName %>', function ($delegate) {
       // decorate the $delegate
       return $delegate;
     });

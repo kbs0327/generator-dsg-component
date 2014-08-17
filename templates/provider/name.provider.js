@@ -4,7 +4,7 @@
 
   angular
     .module('<%= scriptAppName %>')
-    .provider('<%= classedName %>', <%= classedName %>);
+    .provider('<%= cameledName %>', <%= classedName %>);
 
   function <%= classedName %>() {
 
