@@ -1,6 +1,6 @@
 {
   "name": "generator-sg-component",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Yeoman generator and modified generator-ng-component",
   "license": "MIT",
   "main": "app/index.js",
