@@ -1,6 +1,7 @@
 {
-  "generator-sg-component": {
+  "generator-dsg-component": {
     "routeDirectory": "app/components/",
+    "componentDirectory": "app/components/",
     "directiveDirectory": "app/components/",
     "filterDirectory": "app/components/",
     "serviceDirectory": "app/components/",
