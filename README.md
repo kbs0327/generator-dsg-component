@@ -147,6 +147,7 @@ Produces:
 
 ### Service
 Generates an AngularJS service.
+Usage is similar to Factory, Provider
 
 Example:
 ```bash

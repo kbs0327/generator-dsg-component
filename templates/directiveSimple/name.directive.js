@@ -1,4 +1,4 @@
-(function() {
+(function () {
 
     'use strict';
 
@@ -17,11 +17,11 @@
     }
 
     /* @ngInject */
-    function <%= classedName %>(){
+    function <%= classedName %>() {
         //TODO IMPLEMENTS
     }
 
-    function postLink(scope, element, attrs){
+    function postLink(scope, element, attrs) {
         //TODO IMPLEMENTS
         element.text('this is the <%= cameledName %> directive');
     }

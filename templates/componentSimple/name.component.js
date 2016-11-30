@@ -1,4 +1,4 @@
-(function() {
+(function () {
 
     'use strict';
 
@@ -13,19 +13,22 @@
         });
 
     /* @ngInject */
-    function <%= classedName %>(){
+    function <%= classedName %>() {
         var $ctrl = this;
 
         //PreDefined Callback;
 
-        this.$onInit = function() {};
+        this.$onInit = function () {
+        };
 
-        this.$onChanges = function (changes){};
+        this.$onChanges = function (changes){
+        };
 
-        this.$onDestroy = function () {};
+        this.$onDestroy = function () {
+        };
 
         //TODO IMPLEMENTS
-    }
 
+    }
 
 })();
