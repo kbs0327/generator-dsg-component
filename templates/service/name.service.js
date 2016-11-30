@@ -7,8 +7,8 @@
         .service('<%= cameledName %>', <%= classedName %>);
 
     /* @ngInject */
-    function <%= classedName %> () {
-        this.hi = function (){
+    function <%= classedName %>() {
+        this.hi = function () {
             return 'hi';
         }
     }
