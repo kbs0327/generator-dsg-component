@@ -30,6 +30,7 @@ Available generators:
   - [dsg-component:controller](#controller)
   - [dsg-component:filter](#filter)
   - [dsg-component:directive](#directive)
+  - [dsg-component:component](#component)
   - [dsg-component:service](#service)
   - [dsg-component:provider](#service)
   - [dsg-component:factory](#service)
@@ -98,6 +99,37 @@ Produces:
 
     client/app/simple/simple.directive.js
     client/app/simple/simple.directive.spec.js
+
+### Component
+Generates a component.
+
+Example:
+```bash
+yo dsg-component:component myComponent
+[?] Where would you like to create this component? (client/app)
+[?] Does this component need an external html file? Yes
+```
+
+Produces:
+
+    client/app/myComponent/myComponent.component.js
+    client/app/myComponent/myComponent.component.spec.js
+    client/app/myComponent/myComponent.html
+    client/app/myComponent/myComponent.scss
+
+**Simple Component without an html file**
+
+Example:
+```bash
+yo dsg-component:component simpleComponent
+[?] Where would you like to create this component? (client/app)
+[?] Does this component need an external html file? No
+```
+
+Produces:
+
+    client/app/simpleComponent/simpleComponent.component.js
+    client/app/simpleComponent/simpleComponent.component.spec.js
 
 ### Filter
 Generates a filter.
