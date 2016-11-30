@@ -1,4 +1,4 @@
-(function() {
+(function () {
 
     'use strict';
 
@@ -11,7 +11,7 @@
         // Service logic
         // ...
 
-        var meaningOfLife = 99,  meaningOfLife1 = 99;
+        var meaningOfLife = 99, meaningOfLife1 = 99;
 
         // Public API here
         return {
@@ -20,11 +20,11 @@
         };
 
         // Public API Implements
-        function someMethod(){
-          return meaningOfLife;
+        function someMethod() {
+            return meaningOfLife;
         }
 
-        function someMethod1(){
+        function someMethod1() {
             return meaningOfLife1;
         }
     }

@@ -165,13 +165,13 @@ Generates an AngularJS service decorator.
 
 Example:
 ```bash
-yo dsg-component:decorator serviceName
+yo dsg-component:decorator myDecorator
 [?] Where would you like to create this decorator? (client/app)
 ```
 
 Produces
 
-    client/app/serviceName/serviceName.decorator.js
+    client/app/myDecorator/myDecorator.decorator.js
 
 ## License
 

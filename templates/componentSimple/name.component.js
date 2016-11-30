@@ -21,7 +21,7 @@
         this.$onInit = function () {
         };
 
-        this.$onChanges = function (changes){
+        this.$onChanges = function (changes) {
         };
 
         this.$onDestroy = function () {
