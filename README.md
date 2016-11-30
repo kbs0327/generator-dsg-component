@@ -2,6 +2,7 @@
 
 > [Yeoman](http://yeoman.io) generator
 > Following AngularJS Style Guide : [johnpapa guide](https://github.com/johnpapa/angularjs-styleguide)
+
 > Forked from AngularJS-SPA-Development [generator-sg-component](https://github.com/AngularJS-SPA-Development/generator-sg-component)
 
 ## Getting Started
