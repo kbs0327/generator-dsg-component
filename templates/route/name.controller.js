@@ -1,13 +1,13 @@
 (function() {
 
-  'use strict';
+    'use strict';
 
-  angular
-    .module('<%= scriptAppName %>')
-    .controller('<%= classedName %>Ctrl', <%= classedName %>Ctrl);
+    angular
+        .module('<%= scriptAppName %>')
+        .controller('<%= classedName %>Ctrl', <%= classedName %>Ctrl);
 
-  function <%= classedName %>Ctrl($scope, $log) {
-    
-  }
+    function <%= classedName %>Ctrl($scope, $log) {
+
+    }
 
 })();
