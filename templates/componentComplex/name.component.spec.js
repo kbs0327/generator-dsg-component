@@ -6,8 +6,6 @@ describe('Component: <%= cameledName %>', function () {
     beforeEach(module('<%= scriptAppName %>'));
     //beforeEach(module('<%= htmlUrl %>'));
 
-    var element, scope;
-
     var $componentController;
 
     beforeEach(inject(function(_$componentController_) {
@@ -23,7 +21,4 @@ describe('Component: <%= cameledName %>', function () {
         expect(ctrl.item.name).toBe('Hello');
     });
 
-    beforeEach(inject(function ($rootScope) {
-        scope = $rootScope.$new();
-    }));
 });
