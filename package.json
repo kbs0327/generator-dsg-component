@@ -1,19 +1,19 @@
 {
-  "name": "generator-sg-component",
+  "name": "generator-dsg-component",
   "version": "0.0.3",
-  "description": "Yeoman generator and modified generator-ng-component",
+  "description": "Yeoman generator and modified generator-sg-component",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "https://github.com/AngularJS-SPA-Development/generator-sg-component",
+  "repository": "https://github.com/qpitlove/generator-dsg-component",
   "author": {
     "name": "Peter yun",
     "email": "",
-    "url": "https://github.com/AngularJS-SPA-Development"
+    "url": "https://github.com/qpitlove"
   },
   "original author": {
     "name": "Tyler Henkel",
     "email": "",
-    "url": "https://github.com/DaftMonk"
+    "url": "https://github.com/AngularJS-SPA-Development"
   },
   "engines": {
     "node": ">=0.10.0"

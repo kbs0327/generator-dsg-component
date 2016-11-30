@@ -3,5 +3,5 @@ node_js:
   - '0.10'
 before_install:
   - currentfolder=${PWD##*/}
-  - if [ "$currentfolder" != 'generator-sg-component' ]; then cd .. && eval "mv $currentfolder generator-sg-component" && cd generator-sg-component; fi
+  - if [ "$currentfolder" != 'generator-dsg-component' ]; then cd .. && eval "mv $currentfolder generator-dsg-component" && cd generator-dsg-component; fi
 
