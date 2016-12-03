@@ -22,6 +22,11 @@ Generator.prototype.askFor = function askFor() {
       default: self.config.get('componentDirectory')
     },
     {
+      name: 'scriptAppName',
+      message: 'What\'s your module name?',
+      default: self.scriptAppName
+    },
+    {
       type:'confirm',
       name: 'complex',
       message: 'Does this component need an external html file?',
@@ -31,6 +36,7 @@ Generator.prototype.askFor = function askFor() {
 
   this.prompt(prompts, function (props) {
     this.dir = path.join(props.dir, this.name);
+    this.scriptAppName = props.scriptAppName;
     this.complex = props.complex;
     done();
   }.bind(this));
