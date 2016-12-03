@@ -19,11 +19,17 @@ Generator.prototype.askFor = function askFor() {
       name: 'dir',
       message: 'Where would you like to create this service?',
       default: self.config.get('serviceDirectory')
+    },
+    {
+      name: 'scriptAppName',
+      message: 'What\'s your module name?',
+      default: self.scriptAppName
     }
   ];
 
   this.prompt(prompts, function (props) {
     this.dir = path.join(props.dir, this.name);
+    this.scriptAppName = props.scriptAppName;
     done();
   }.bind(this));
 };

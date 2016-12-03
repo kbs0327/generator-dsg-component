@@ -11,21 +11,16 @@
         // Service logic
         // ...
 
-        var meaningOfLife = 99, meaningOfLife1 = 99;
+        var meaningOfLife = 99;
 
         // Public API here
         return {
-            someMethod: someMethod,
-            someMethod1: someMethod1
+            someMethod: someMethod
         };
 
         // Public API Implements
         function someMethod() {
             return meaningOfLife;
-        }
-
-        function someMethod1() {
-            return meaningOfLife1;
         }
     }
 

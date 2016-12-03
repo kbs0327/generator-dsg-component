@@ -23,6 +23,11 @@ Generator.prototype.askFor = function askFor() {
       default: self.config.get('routeDirectory')
     },
     {
+      name: 'scriptAppName',
+      message: 'What\'s your module name?',
+      default: self.scriptAppName
+    },
+    {
       name: 'route',
       message: 'What will the url of your route be?',
       default: '/' + name
@@ -30,8 +35,9 @@ Generator.prototype.askFor = function askFor() {
   ];
 
   this.prompt(prompts, function (props) {
-    this.route = props.route;
     this.dir = path.join(props.dir, this.name);
+    this.scriptAppName = props.scriptAppName;
+    this.route = props.route;
     done();
   }.bind(this));
 };
