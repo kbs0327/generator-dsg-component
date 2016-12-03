@@ -1,6 +1,6 @@
 {
   "name": "generator-dsg-component",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Yeoman generator and modified generator-sg-component",
   "license": "MIT",
   "main": "app/index.js",
