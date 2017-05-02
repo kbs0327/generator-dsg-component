@@ -14,14 +14,14 @@
             controller: <%= classedName %>,
             link: postLink
         };
+
+        function postLink(scope, element, attrs) {
+          //TODO IMPLEMENTS
+        }
     }
 
     /* @ngInject */
     function <%= classedName %>() {
-        //TODO IMPLEMENTS
-    }
-
-    function postLink(scope, element, attrs) {
         //TODO IMPLEMENTS
     }
 
