@@ -11,19 +11,19 @@
         return {
             template: '<div></div>',
             restrict: 'EA',
-            controller: <%= classedName %>(),
+            controller: <%= classedName %>,
             link: postLink
         };
+
+        function postLink(scope, element, attrs) {
+          //TODO IMPLEMENTS
+          element.text('this is the <%= cameledName %> directive');
+        }
     }
 
     /* @ngInject */
     function <%= classedName %>() {
         //TODO IMPLEMENTS
-    }
-
-    function postLink(scope, element, attrs) {
-        //TODO IMPLEMENTS
-        element.text('this is the <%= cameledName %> directive');
     }
 
 })();
