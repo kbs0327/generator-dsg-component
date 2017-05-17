@@ -93,8 +93,8 @@ describe('dsg-component generator', function () {
       it('should generate a new factory', function (done) {
         generatorTest('factory', 'foo', {dir: 'app/components/'}, function () {
           helpers.assertFile([
-            path.join('app/components/foo', 'foo.service.js'),
-            path.join('app/components/foo', 'foo.service.spec.js')
+            path.join('app/components/foo', 'foo.factory.js'),
+            path.join('app/components/foo', 'foo.factory.spec.js')
           ]);
           done();
         });
@@ -188,8 +188,8 @@ describe('dsg-component generator', function () {
       it('should generate a new factory', function (done) {
         generatorTest('factory', 'foo', {dir: 'client/app/'}, function () {
           helpers.assertFile([
-            path.join('client/app/foo', 'foo.service.coffee'),
-            path.join('client/app/foo', 'foo.service.spec.coffee')
+            path.join('client/app/foo', 'foo.factory.coffee'),
+            path.join('client/app/foo', 'foo.factory.spec.coffee')
           ]);
           done();
         });
@@ -235,8 +235,8 @@ describe('dsg-component generator', function () {
       it('should generate a new provider', function (done) {
         generatorTest('provider', 'foo', {dir: 'client/app/'}, function () {
           helpers.assertFile([
-            path.join('client/app/foo', 'foo.service.coffee'),
-            path.join('client/app/foo', 'foo.service.spec.coffee')
+            path.join('client/app/foo', 'foo.provider.coffee'),
+            path.join('client/app/foo', 'foo.provider.spec.coffee')
           ]);
           done();
         });
