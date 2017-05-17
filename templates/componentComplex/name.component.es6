@@ -14,14 +14,14 @@
 
     /* @ngInject */
     function <%= classedName %>() {
-        var $ctrl = this;
+        //var $ctrl = this;
 
         //PreDefined Callback;
 
         this.$onInit = function () {
         };
 
-        this.$onChanges = function (changes) {
+        this.$onChanges = function (/*changes*/) {
         };
 
         this.$onDestroy = function () {

@@ -14,7 +14,7 @@
 
     /* @ngInject */
     function <%= classedName %>() {
-        var $ctrl = this;
+        //var $ctrl = this;
 
         //PreDefined Callback;
 
