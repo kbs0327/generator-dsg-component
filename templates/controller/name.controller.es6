@@ -8,7 +8,7 @@
         .controller('<%= classedName %>Ctrl', <%= classedName %>Ctrl);
 
     /* @ngInject */
-    function <%= classedName %>Ctrl($scope, $log) {
+    function <%= classedName %>Ctrl(/*$scope*/) {
 
     }
 
