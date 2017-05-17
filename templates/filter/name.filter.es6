@@ -1,5 +1,4 @@
-//FIXME
-(function () {
+(() => {
 
     'use strict';
 
@@ -9,8 +8,8 @@
 
     /* @ngInject */
     function <%= classedName %>() {
-        return function (input) {
-            return '<%= classedName %> filter: ' + input;
+        return (input) => {
+            return `MyFilter filter: ${input}`;
         };
     }
 

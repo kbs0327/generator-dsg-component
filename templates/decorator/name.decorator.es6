@@ -1,5 +1,4 @@
-//FIXME
-(function () {
+(() => {
 
     'use strict';
 
@@ -9,7 +8,7 @@
 
     /* @ngInject */
     function Config($provide) {
-        $provide.decorator('<%= cameledName %>', function ($delegate) {
+        $provide.decorator('<%= cameledName %>', ($delegate) => {
             // decorate the $delegate
             return $delegate;
         });

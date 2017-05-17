@@ -1,6 +1,4 @@
-//FIXME
-
-describe('Controller: <%= classedName %>Ctrl', function () {
+describe('Controller: <%= classedName %>Ctrl', () => {
 
     // load the controller's module
     beforeEach(module('<%= scriptAppName %>'));
@@ -8,14 +6,14 @@ describe('Controller: <%= classedName %>Ctrl', function () {
     var <%= classedName %>Ctrl, scope;
 
     // Initialize the controller and a mock scope
-    beforeEach(inject(function ($controller, $rootScope) {
+    beforeEach(inject(($controller, $rootScope) => {
         scope = $rootScope.$new();
         <%= classedName %>Ctrl = $controller('<%= classedName %>Ctrl', {
             $scope: scope
         });
     }));
 
-    it('should ...', function () {
+    it('should ...', () => {
         expect(1).toEqual(1);
     });
 });

@@ -1,5 +1,4 @@
-//FIXME
-(function () {
+(() => {
 
     'use strict';
 
@@ -19,14 +18,14 @@
 
         //PreDefined Callback;
 
-        this.$onInit = function () {
+        this.$onInit = () => {
         };
 
-        this.$onChanges = function (changes) {
+        this.$onChanges = (changes) => {
             $ctrl.item === changes.item.currentValue;
         };
 
-        this.$onDestroy = function () {
+        this.$onDestroy = () => {
         };
 
         //TODO IMPLEMENTS

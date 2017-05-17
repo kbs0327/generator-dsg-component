@@ -1,5 +1,4 @@
-//FIXME
-(function () {
+(() => {
 
     'use strict';
 

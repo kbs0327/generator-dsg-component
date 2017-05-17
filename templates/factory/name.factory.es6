@@ -1,5 +1,4 @@
-//FIXME
-(function () {
+(() => {
 
     'use strict';
 
@@ -16,7 +15,7 @@
 
         // Public API here
         return {
-            someMethod: someMethod
+            someMethod
         };
 
         // Public API Implements

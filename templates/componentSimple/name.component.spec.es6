@@ -1,6 +1,4 @@
-//FIXME
-
-describe('Component: <%= cameledName %>', function () {
+describe('Component: <%= cameledName %>', () => {
 
     // load the component's module and view
     beforeEach(module('<%= scriptAppName %>'));
@@ -8,11 +6,11 @@ describe('Component: <%= cameledName %>', function () {
 
     var $componentController;
 
-    beforeEach(inject(function (_$componentController_) {
+    beforeEach(inject((_$componentController_) => {
         $componentController = _$componentController_;
     }));
 
-    it('should expose a `hero` object', function () {
+    it('should expose a `hero` object', () => {
         // Here we are passing actual bindings to the component
         var bindings = {item: {name: 'Hello'}};
         var ctrl = $componentController('<%= cameledName %>', null, bindings);

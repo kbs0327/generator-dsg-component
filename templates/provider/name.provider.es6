@@ -1,5 +1,4 @@
-//FIXME
-(function () {
+(() => {
 
     'use strict';
 
@@ -15,18 +14,18 @@
 
         // Private constructor
         function Greeter() {
-            this.greet = function () {
+            this.greet = () => {
                 return salutation;
             };
         }
 
         // Public API for configuration
-        this.setSalutation = function (s) {
+        this.setSalutation = (s) => {
             salutation = s;
         };
 
         // Method for instantiating
-        this.$get = function () {
+        this.$get = () => {
             return new Greeter();
         };
     }

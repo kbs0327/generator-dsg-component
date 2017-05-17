@@ -1,6 +1,4 @@
-//FIXME
-
-describe('Factory: <%= cameledName %>', function () {
+describe('Factory: <%= cameledName %>', () => {
 
     // load the service's module
     beforeEach(module('<%= scriptAppName %>'));
@@ -11,7 +9,7 @@ describe('Factory: <%= cameledName %>', function () {
         <%= cameledName %> = _<%= cameledName %>_;
     }));
 
-    it('should do something', function () {
+    it('should do something', () => {
         expect(!!<%= cameledName %>).toBe(true);
     });
 
