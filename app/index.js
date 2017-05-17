@@ -5,11 +5,11 @@ var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 
 
-var NgComponentGenerator = yeoman.generators.Base.extend({
+var DsgComponentGenerator = yeoman.generators.Base.extend({
 
   info: function () {
     if(!this.options['skip-message']) {
-      console.log(chalk.magenta('You\'re using the fantastic NgComponent generator.\n'));
+      console.log(chalk.magenta('You\'re using the fantastic DsgComponent generator.\n'));
       console.log(chalk.magenta('Initializing yo-rc.json configuration.\n'));
     }
   },
@@ -26,4 +26,4 @@ var NgComponentGenerator = yeoman.generators.Base.extend({
   }
 });
 
-module.exports = NgComponentGenerator;
+module.exports = DsgComponentGenerator;

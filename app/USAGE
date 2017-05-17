@@ -2,8 +2,8 @@ Description:
     Generators for AngularJS components
 
 Available Generators:
-    yo ng-component:route [name]
-    yo ng-component:directive [name]
-    yo ng-component:service [name]
-    yo ng-component:factory [name]
-    yo ng-component:filter [name]
+    yo dsg-component:route [name]
+    yo dsg-component:directive [name]
+    yo dsg-component:service [name]
+    yo dsg-component:factory [name]
+    yo dsg-component:filter [name]

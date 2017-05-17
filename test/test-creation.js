@@ -5,16 +5,16 @@ var helpers = require('yeoman-generator').test;
 var assert = require('assert');
 var fs = require('fs');
 
-describe('ng-component generator', function () {
+describe('dsg-component generator', function () {
   var gen;
 
   function generatorTest(generatorType, name, mockPrompt, callback) {
-    var ngGenerator;
+    var dsgGenerator;
     var deps = [path.join('../..', generatorType)];
-    ngGenerator = helpers.createGenerator('ng-component:' + generatorType, deps, [name]);
+    dsgGenerator = helpers.createGenerator('dsg-component:' + generatorType, deps, [name]);
 
-    helpers.mockPrompt(ngGenerator, mockPrompt);
-    ngGenerator.run([], function () {
+    helpers.mockPrompt(dsgGenerator, mockPrompt);
+    dsgGenerator.run([], function () {
       callback();
     });
   }
@@ -27,7 +27,7 @@ describe('ng-component generator', function () {
         }
 
         fs.writeFileSync(path.join(__dirname, 'temp', '.yo-rc.json'), fs.readFileSync('../fixtures/.yo-rc.default.json'));
-        gen = helpers.createGenerator('ng-component:app', [
+        gen = helpers.createGenerator('dsg-component:app', [
           '../../app'
         ]);
         done();
@@ -122,7 +122,7 @@ describe('ng-component generator', function () {
         }
 
         fs.writeFileSync(path.join(__dirname, 'temp', '.yo-rc.json'), fs.readFileSync('../fixtures/.yo-rc.custom.json'));
-        gen = helpers.createGenerator('ng-component:app', [
+        gen = helpers.createGenerator('dsg-component:app', [
           '../../app'
         ]);
         done();
