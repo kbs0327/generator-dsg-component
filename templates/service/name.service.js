@@ -10,7 +10,7 @@
     function <%= classedName %>() {
         this.hi = function () {
             return 'hi';
-        }
+        };
     }
 
 })();
