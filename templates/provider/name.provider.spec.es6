@@ -1,5 +1,4 @@
 //FIXME
-'use strict';
 
 describe('Provider: <%= cameledName %>', function () {
 

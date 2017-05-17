@@ -1,5 +1,4 @@
 //FIXME
-'use strict';
 
 describe('Directive: <%= cameledName %>', function () {
 

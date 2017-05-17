@@ -1,5 +1,4 @@
 //FIXME
-'use strict';
 
 describe('Service: <%= cameledName %>', function () {
 

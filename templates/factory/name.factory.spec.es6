@@ -1,5 +1,4 @@
 //FIXME
-'use strict';
 
 describe('Factory: <%= cameledName %>', function () {
 
