@@ -17,6 +17,7 @@ var Generator = module.exports = function Generator() {
 
   this.cameledName = this._.camelize(this.name);
   this.classedName = this._.classify(this.name);
+  this.slugifyName = this._.slugify(this._.humanize(this.name));
 
   if (typeof this.env.options.appPath === 'undefined') {
     try {

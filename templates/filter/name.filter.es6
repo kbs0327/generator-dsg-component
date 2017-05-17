@@ -1,15 +1,15 @@
-(function () {
+(() => {
 
     'use strict';
 
     angular
         .module('<%= scriptAppName %>')
-        .service('<%= cameledName %>', <%= classedName %>);
+        .filter('<%= cameledName %>', <%= classedName %>);
 
     /* @ngInject */
     function <%= classedName %>() {
-        this.hi = function () {
-            return 'hi';
+        return (input) => {
+            return `MyFilter filter: ${input}`;
         };
     }
 

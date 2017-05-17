@@ -1,4 +1,4 @@
-(function () {
+(() => {
 
     'use strict';
 
@@ -8,7 +8,7 @@
 
     /* @ngInject */
     function <%= classedName %>() {
-        this.hi = function () {
+        this.hi = () => {
             return 'hi';
         };
     }

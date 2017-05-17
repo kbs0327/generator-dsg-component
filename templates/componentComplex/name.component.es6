@@ -1,11 +1,10 @@
-(function () {
-
+(() => {
     'use strict';
 
     angular
         .module('<%= scriptAppName %>')
         .component('<%= cameledName %>', {
-            template: '<div></div>',
+            templateUrl: '<%= htmlUrl %>',
             controller: <%= classedName %>,
             bindings: {
                 item: '<'
@@ -14,17 +13,18 @@
 
     /* @ngInject */
     function <%= classedName %>() {
-        //var $ctrl = this;
+        var $ctrl = this;
 
         //PreDefined Callback;
 
-        this.$onInit = function () {
+        this.$onInit = () => {
         };
 
-        this.$onChanges = function (/*changes*/) {
+        this.$onChanges = (changes) => {
+          $ctrl.item === changes.item.currentValue;
         };
 
-        this.$onDestroy = function () {
+        this.$onDestroy = () => {
         };
 
         //TODO IMPLEMENTS

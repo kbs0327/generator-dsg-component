@@ -21,7 +21,8 @@
         this.$onInit = function () {
         };
 
-        this.$onChanges = function (/*changes*/) {
+        this.$onChanges = function (changes) {
+            $ctrl.item === changes.item.currentValue;
         };
 
         this.$onDestroy = function () {

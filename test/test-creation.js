@@ -5,16 +5,16 @@ var helpers = require('yeoman-generator').test;
 var assert = require('assert');
 var fs = require('fs');
 
-describe('ng-component generator', function () {
+describe('dsg-component generator', function () {
   var gen;
 
   function generatorTest(generatorType, name, mockPrompt, callback) {
-    var ngGenerator;
+    var dsgGenerator;
     var deps = [path.join('../..', generatorType)];
-    ngGenerator = helpers.createGenerator('ng-component:' + generatorType, deps, [name]);
+    dsgGenerator = helpers.createGenerator('dsg-component:' + generatorType, deps, [name]);
 
-    helpers.mockPrompt(ngGenerator, mockPrompt);
-    ngGenerator.run([], function () {
+    helpers.mockPrompt(dsgGenerator, mockPrompt);
+    dsgGenerator.run([], function () {
       callback();
     });
   }
@@ -27,7 +27,7 @@ describe('ng-component generator', function () {
         }
 
         fs.writeFileSync(path.join(__dirname, 'temp', '.yo-rc.json'), fs.readFileSync('../fixtures/.yo-rc.default.json'));
-        gen = helpers.createGenerator('ng-component:app', [
+        gen = helpers.createGenerator('dsg-component:app', [
           '../../app'
         ]);
         done();
@@ -93,8 +93,8 @@ describe('ng-component generator', function () {
       it('should generate a new factory', function (done) {
         generatorTest('factory', 'foo', {dir: 'app/components/'}, function () {
           helpers.assertFile([
-            path.join('app/components/foo', 'foo.service.js'),
-            path.join('app/components/foo', 'foo.service.spec.js')
+            path.join('app/components/foo', 'foo.factory.js'),
+            path.join('app/components/foo', 'foo.factory.spec.js')
           ]);
           done();
         });
@@ -122,7 +122,7 @@ describe('ng-component generator', function () {
         }
 
         fs.writeFileSync(path.join(__dirname, 'temp', '.yo-rc.json'), fs.readFileSync('../fixtures/.yo-rc.custom.json'));
-        gen = helpers.createGenerator('ng-component:app', [
+        gen = helpers.createGenerator('dsg-component:app', [
           '../../app'
         ]);
         done();
@@ -188,8 +188,8 @@ describe('ng-component generator', function () {
       it('should generate a new factory', function (done) {
         generatorTest('factory', 'foo', {dir: 'client/app/'}, function () {
           helpers.assertFile([
-            path.join('client/app/foo', 'foo.service.coffee'),
-            path.join('client/app/foo', 'foo.service.spec.coffee')
+            path.join('client/app/foo', 'foo.factory.coffee'),
+            path.join('client/app/foo', 'foo.factory.spec.coffee')
           ]);
           done();
         });
@@ -235,8 +235,8 @@ describe('ng-component generator', function () {
       it('should generate a new provider', function (done) {
         generatorTest('provider', 'foo', {dir: 'client/app/'}, function () {
           helpers.assertFile([
-            path.join('client/app/foo', 'foo.service.coffee'),
-            path.join('client/app/foo', 'foo.service.spec.coffee')
+            path.join('client/app/foo', 'foo.provider.coffee'),
+            path.join('client/app/foo', 'foo.provider.spec.coffee')
           ]);
           done();
         });
