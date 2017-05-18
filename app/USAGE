@@ -3,7 +3,11 @@ Description:
 
 Available Generators:
     yo dsg-component:route [name]
-    yo dsg-component:directive [name]
-    yo dsg-component:service [name]
-    yo dsg-component:factory [name]
+    yo dsg-component:controller [name]
     yo dsg-component:filter [name]
+    yo dsg-component:directive [name]
+    yo dsg-component:component [name]
+    yo dsg-component:service [name]
+    yo dsg-component:provider [name]
+    yo dsg-component:factory [name]
+    yo dsg-component:decorator [name]

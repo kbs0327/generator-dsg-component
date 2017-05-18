@@ -1,4 +1,5 @@
 describe('Component: <%= cameledName %>', () => {
+    'use strict';
 
     // load the component's module and view
     beforeEach(module('<%= scriptAppName %>'));

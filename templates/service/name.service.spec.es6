@@ -1,4 +1,5 @@
 describe('Service: <%= cameledName %>', () => {
+    'use strict';
 
     // load the service's module
     beforeEach(module('<%= scriptAppName %>'));
