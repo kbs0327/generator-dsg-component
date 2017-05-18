@@ -1,4 +1,5 @@
 describe('Filter: <%= cameledName %>', () => {
+  'use strict';
 
     // load the filter's module
     beforeEach(module('<%= scriptAppName %>'));
