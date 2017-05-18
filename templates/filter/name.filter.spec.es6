@@ -5,13 +5,13 @@ describe('Filter: <%= cameledName %>', () => {
     beforeEach(module('<%= scriptAppName %>'));
 
     // initialize a new instance of the filter before each test
-    var <%= cameledName %>;
+    let <%= cameledName %>;
     beforeEach(inject(($filter) => {
         <%= cameledName %> = $filter('<%= cameledName %>');
     }));
 
     it('should return the input prefixed with "<%= cameledName %> filter:"', () => {
-        var text = 'angularjs';
+        let text = 'angularjs';
         expect(<%= cameledName %>(text)).toBe('<%= cameledName %> filter: ' + text);
     });
 

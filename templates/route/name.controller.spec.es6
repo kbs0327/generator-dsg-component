@@ -4,7 +4,7 @@ describe('Controller: <%= classedName %>Ctrl', () => {
     // load the controller's module
     beforeEach(module('<%= scriptAppName %>'));
 
-    var <%= classedName %>Ctrl, scope;
+    let <%= classedName %>Ctrl, scope;
 
     // Initialize the controller and a mock scope
     beforeEach(inject(($controller, $rootScope) => {

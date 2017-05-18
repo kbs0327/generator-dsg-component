@@ -5,7 +5,7 @@ describe('Directive: <%= cameledName %>', () => {
     beforeEach(module('<%= scriptAppName %>'));
     //beforeEach(module('<%= htmlUrl %>'));
 
-    var element, scope;
+    let element, scope;
 
     beforeEach(inject(($rootScope) => {
         scope = $rootScope.$new();

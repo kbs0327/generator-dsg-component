@@ -10,7 +10,7 @@
     function <%= classedName %>() {
 
         // Private variables
-        var salutation = 'Hello';
+        let salutation = 'Hello';
 
         // Private constructor
         function Greeter() {
