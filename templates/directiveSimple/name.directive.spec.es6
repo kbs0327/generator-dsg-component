@@ -4,7 +4,7 @@ describe('Directive: <%= cameledName %>', () => {
     // load the directive's module
     beforeEach(module('<%= scriptAppName %>'));
 
-    var element,
+    let element,
         scope;
 
     beforeEach(inject(function ($rootScope) {

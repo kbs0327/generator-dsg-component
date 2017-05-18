@@ -11,7 +11,7 @@
         // Service logic
         // ...
 
-        var meaningOfLife = 99;
+        let meaningOfLife = 99;
 
         // Public API here
         return {

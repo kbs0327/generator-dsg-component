@@ -5,7 +5,7 @@ describe('Component: <%= cameledName %>', () => {
     beforeEach(module('<%= scriptAppName %>'));
     //beforeEach(module('<%= htmlUrl %>'));
 
-    var $componentController;
+    let $componentController;
 
     beforeEach(inject((_$componentController_) => {
         $componentController = _$componentController_;
@@ -13,8 +13,8 @@ describe('Component: <%= cameledName %>', () => {
 
     it('should expose a `hero` object', () => {
         // Here we are passing actual bindings to the component
-        var bindings = {item: {name: 'Hello'}};
-        var ctrl = $componentController('<%= cameledName %>', null, bindings);
+        let bindings = {item: {name: 'Hello'}};
+        let ctrl = $componentController('<%= cameledName %>', null, bindings);
 
         expect(ctrl.item).toBeDefined();
         expect(ctrl.item.name).toBe('Hello');

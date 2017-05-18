@@ -5,7 +5,7 @@ describe('Provider: <%= cameledName %>', () => {
     beforeEach(module('<%= scriptAppName %>'));
 
     // instantiate service
-    var <%= cameledName %>;
+    let <%= cameledName %>;
     beforeEach(inject((_<%= cameledName %>_) => {
         <%= cameledName %> = _<%= cameledName %>_;
     }));
