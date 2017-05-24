@@ -1,34 +1,29 @@
-(() => {
-    'use strict';
+angular
+    .module('<%= scriptAppName %>')
+    .component('<%= cameledName %>', {
+        templateUrl: '<%= htmlUrl %>',
+        controller: <%= classedName %>,
+        bindings: {
+            item: '<'
+        }
+    });
 
-    angular
-        .module('<%= scriptAppName %>')
-        .component('<%= cameledName %>', {
-            templateUrl: '<%= htmlUrl %>',
-            controller: <%= classedName %>,
-            bindings: {
-                item: '<'
-            }
-        });
+/* @ngInject */
+function <%= classedName %>() {
+    const $ctrl = this;
 
-    /* @ngInject */
-    function <%= classedName %>() {
-        const $ctrl = this;
+    //PreDefined Callback;
 
-        //PreDefined Callback;
+    this.$onInit = () => {
+    };
 
-        this.$onInit = () => {
-        };
+    this.$onChanges = (changes) => {
+      $ctrl.item === changes.item.currentValue;
+    };
 
-        this.$onChanges = (changes) => {
-          $ctrl.item === changes.item.currentValue;
-        };
+    this.$onDestroy = () => {
+    };
 
-        this.$onDestroy = () => {
-        };
+    //TODO IMPLEMENTS
 
-        //TODO IMPLEMENTS
-
-    }
-
-})();
+}

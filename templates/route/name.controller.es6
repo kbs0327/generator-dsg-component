@@ -1,14 +1,8 @@
-(() => {
+angular
+    .module('<%= scriptAppName %>')
+    .controller('<%= classedName %>Ctrl', <%= classedName %>Ctrl);
 
-    'use strict';
+/* @ngInject */
+function <%= classedName %>Ctrl(/*$scope*/) {
 
-    angular
-        .module('<%= scriptAppName %>')
-        .controller('<%= classedName %>Ctrl', <%= classedName %>Ctrl);
-
-    /* @ngInject */
-    function <%= classedName %>Ctrl(/*$scope*/) {
-
-    }
-
-})();
+}

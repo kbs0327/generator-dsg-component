@@ -1,35 +1,29 @@
-(() => {
+angular
+    .module('<%= scriptAppName %>')
+    .component('<%= cameledName %>', {
+        template: '<div></div>',
+        controller: <%= classedName %>,
+        bindings: {
+            item: '<'
+        }
+    });
 
-    'use strict';
+/* @ngInject */
+function <%= classedName %>() {
+    const $ctrl = this;
 
-    angular
-        .module('<%= scriptAppName %>')
-        .component('<%= cameledName %>', {
-            template: '<div></div>',
-            controller: <%= classedName %>,
-            bindings: {
-                item: '<'
-            }
-        });
+    //PreDefined Callback;
 
-    /* @ngInject */
-    function <%= classedName %>() {
-        const $ctrl = this;
+    this.$onInit = () => {
+    };
 
-        //PreDefined Callback;
+    this.$onChanges = (changes) => {
+        $ctrl.item === changes.item.currentValue;
+    };
 
-        this.$onInit = () => {
-        };
+    this.$onDestroy = () => {
+    };
 
-        this.$onChanges = (changes) => {
-            $ctrl.item === changes.item.currentValue;
-        };
+    //TODO IMPLEMENTS
 
-        this.$onDestroy = () => {
-        };
-
-        //TODO IMPLEMENTS
-
-    }
-
-})();
+}

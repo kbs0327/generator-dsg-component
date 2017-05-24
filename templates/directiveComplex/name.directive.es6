@@ -1,28 +1,22 @@
-(() => {
+angular
+    .module('<%= scriptAppName %>')
+    .directive('<%= cameledName %>', <%= classedName %>Directive);
 
-    'use strict';
+/* @ngInject */
+function <%= classedName %>Directive() {
+    return {
+        templateUrl: '<%= htmlUrl %>',
+        restrict: 'EA',
+        controller: <%= classedName %>,
+        link: postLink
+    };
+}
 
-    angular
-        .module('<%= scriptAppName %>')
-        .directive('<%= cameledName %>', <%= classedName %>Directive);
+/* @ngInject */
+function <%= classedName %>() {
+    //TODO IMPLEMENTS
+}
 
-    /* @ngInject */
-    function <%= classedName %>Directive() {
-        return {
-            templateUrl: '<%= htmlUrl %>',
-            restrict: 'EA',
-            controller: <%= classedName %>,
-            link: postLink
-        };
-    }
-
-    /* @ngInject */
-    function <%= classedName %>() {
-        //TODO IMPLEMENTS
-    }
-
-    function postLink(scope, element, attrs) {
-        //TODO IMPLEMENTS
-    }
-
-})();
+function postLink(scope, element, attrs) {
+    //TODO IMPLEMENTS
+}

@@ -1,33 +1,27 @@
-(() => {
+angular
+    .module('<%= scriptAppName %>')
+    .provider('<%= cameledName %>', <%= classedName %>);
 
-    'use strict';
+/* @ngInject */
+function <%= classedName %>() {
 
-    angular
-        .module('<%= scriptAppName %>')
-        .provider('<%= cameledName %>', <%= classedName %>);
+    // Private variables
+    let salutation = 'Hello';
 
-    /* @ngInject */
-    function <%= classedName %>() {
-
-        // Private variables
-        let salutation = 'Hello';
-
-        // Private constructor
-        function Greeter() {
-            this.greet = () => {
-                return salutation;
-            };
-        }
-
-        // Public API for configuration
-        this.setSalutation = (s) => {
-            salutation = s;
-        };
-
-        // Method for instantiating
-        this.$get = () => {
-            return new Greeter();
+    // Private constructor
+    function Greeter() {
+        this.greet = () => {
+            return salutation;
         };
     }
 
-})();
+    // Public API for configuration
+    this.setSalutation = (s) => {
+        salutation = s;
+    };
+
+    // Method for instantiating
+    this.$get = () => {
+        return new Greeter();
+    };
+}
