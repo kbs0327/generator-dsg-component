@@ -1,7 +1,3 @@
-(() => {
-
-    'use strict';
-
     angular
         .module('<%= scriptAppName %>')
         .factory('<%= cameledName %>', <%= classedName %>);
@@ -23,5 +19,3 @@
             return meaningOfLife;
         }
     }
-
-})();

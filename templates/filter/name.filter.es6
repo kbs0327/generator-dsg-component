@@ -1,16 +1,10 @@
-(() => {
+angular
+    .module('<%= scriptAppName %>')
+    .filter('<%= cameledName %>', <%= classedName %>);
 
-    'use strict';
-
-    angular
-        .module('<%= scriptAppName %>')
-        .filter('<%= cameledName %>', <%= classedName %>);
-
-    /* @ngInject */
-    function <%= classedName %>() {
-        return (input) => {
-            return `MyFilter filter: ${input}`;
-        };
-    }
-
-})();
+/* @ngInject */
+function <%= classedName %>() {
+    return (input) => {
+        return `MyFilter filter: ${input}`;
+    };
+}
