@@ -5,6 +5,6 @@ angular
 /* @ngInject */
 function <%= classedName %>() {
     return (input) => {
-        return `MyFilter filter: ${input}`;
+        return '<%= classedName %> filter: ' + input;
     };
 }
