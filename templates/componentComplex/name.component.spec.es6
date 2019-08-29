@@ -2,7 +2,7 @@ describe('Component: <%= cameledName %>', () => {
     'use strict';
 
     // load the component's module and view
-    beforeEach(module('<%= scriptAppName %>'));
+    beforeEach(module('<%= moduleUtil.findModuleRealName(scriptAppName) %>'));
     //beforeEach(module('<%= htmlUrl %>'));
 
     let $componentController;

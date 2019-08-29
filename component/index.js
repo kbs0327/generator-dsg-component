@@ -51,6 +51,8 @@ Generator.prototype.createFiles = function createFiles() {
     templateDir = path.join(this.sourceRoot(), 'componentComplex');
   }
 
+  var basePath = this.config.get('basePath') || '';
+  this.htmlUrl = ngUtil.relativeUrl(basePath, path.join(this.dir, this.name + '.html'));
   this.moduleUtil = moduleUtil;
   ngUtil.copyTemplates(this, 'component', templateDir, configName);
 };
