@@ -1,7 +1,7 @@
-angular
-    .module('<%= scriptAppName %>')
+import './<%= name %>.html';
+<%= moduleUtil.makeDeclareTemplate(scriptAppName) %>
     .component('<%= cameledName %>', {
-        templateUrl: '<%= htmlUrl %>',
+        template,
         controller: <%= classedName %>,
         bindings: {
             item: '<'
@@ -17,7 +17,7 @@ function <%= classedName %>() {
     this.$onInit = () => {
     };
 
-    this.$onChanges = (changes) => {
+    this.$onChanges = changes => {
       $ctrl.item === changes.item.currentValue;
     };
 

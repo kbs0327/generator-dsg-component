@@ -4,6 +4,7 @@ var yeoman = require('yeoman-generator');
 var util = require('util');
 var ngUtil = require('../util');
 var ScriptBase = require('../script-base.js');
+var moduleUtil = require('../app/moduleUtil.js');
 
 var Generator = module.exports = function Generator() {
   ScriptBase.apply(this, arguments);
@@ -50,7 +51,6 @@ Generator.prototype.createFiles = function createFiles() {
     templateDir = path.join(this.sourceRoot(), 'componentComplex');
   }
 
-  var basePath = this.config.get('basePath') || '';
-  this.htmlUrl = ngUtil.relativeUrl(basePath, path.join(this.dir, this.name + '.html'));
+  this.moduleUtil = moduleUtil;
   ngUtil.copyTemplates(this, 'component', templateDir, configName);
 };
