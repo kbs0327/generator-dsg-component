@@ -1,10 +1,9 @@
-angular
-    .module('<%= scriptAppName %>')
-    .service('<%= cameledName %>', <%= classedName %>);
+<%= moduleUtil.makeDeclareTemplate(scriptAppName) %>
+  .service('<%= cameledName %>', <%= classedName %>);
 
 /* @ngInject */
 function <%= classedName %>() {
-    this.hi = () => {
-        return 'hi';
-    };
+  this.hi = () => {
+    return 'hi';
+  };
 }

@@ -1,29 +1,26 @@
-angular
-    .module('<%= scriptAppName %>')
-    .component('<%= cameledName %>', {
-        template: '<div></div>',
-        controller: <%= classedName %>,
-        bindings: {
-            item: '<'
-        }
-    });
+<%= moduleUtil.makeDeclareTemplate(scriptAppName) %>
+  .component('<%= cameledName %>', {
+    controller: <%= classedName %>,
+    bindings: {
+      item: '<'
+    }
+  });
 
 /* @ngInject */
 function <%= classedName %>() {
-    const $ctrl = this;
+  const $ctrl = this;
 
-    //PreDefined Callback;
+  //PreDefined Callback;
 
-    this.$onInit = () => {
-    };
+  this.$onInit = () => {
+  };
 
-    this.$onChanges = (changes) => {
-        $ctrl.item === changes.item.currentValue;
-    };
+  this.$onChanges = changes => {
+    $ctrl.item === changes.item.currentValue;
+  };
 
-    this.$onDestroy = () => {
-    };
+  this.$onDestroy = () => {
+  };
 
-    //TODO IMPLEMENTS
-
+  //TODO IMPLEMENTS
 }

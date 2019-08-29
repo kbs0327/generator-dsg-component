@@ -1,22 +1,22 @@
-angular
-    .module('<%= scriptAppName %>')
-    .directive('<%= cameledName %>', <%= classedName %>Directive);
+import template from './<%= name %>.html';
+<%= moduleUtil.makeDeclareTemplate(scriptAppName) %>
+  .directive('<%= cameledName %>', <%= classedName %>Directive);
 
 /* @ngInject */
 function <%= classedName %>Directive() {
-    return {
-        templateUrl: '<%= htmlUrl %>',
-        restrict: 'EA',
-        controller: <%= classedName %>,
-        link: postLink
-    };
+  return {
+    template,
+    restrict: 'EA',
+    controller: <%= classedName %>,
+    link: postLink
+  };
+
+  function postLink(scope, element, attrs) {
+    //TODO IMPLEMENTS
+  }
 }
 
 /* @ngInject */
 function <%= classedName %>() {
-    //TODO IMPLEMENTS
-}
-
-function postLink(scope, element, attrs) {
-    //TODO IMPLEMENTS
+  //TODO IMPLEMENTS
 }

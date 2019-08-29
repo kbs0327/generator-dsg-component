@@ -1,5 +1,4 @@
-angular
-    .module('<%= scriptAppName %>')
+<%= moduleUtil.makeDeclareTemplate(scriptAppName) %>
     .config(Config);
 
 /* @ngInject */

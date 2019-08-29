@@ -1,29 +1,28 @@
-import './<%= name %>.html';
+import template from './<%= name %>.html';
 <%= moduleUtil.makeDeclareTemplate(scriptAppName) %>
-    .component('<%= cameledName %>', {
-        template,
-        controller: <%= classedName %>,
-        bindings: {
-            item: '<'
-        }
-    });
+  .component('<%= cameledName %>', {
+    template,
+    controller: <%= classedName %>,
+    bindings: {
+      item: '<'
+    }
+  });
 
 /* @ngInject */
 function <%= classedName %>() {
-    const $ctrl = this;
+  const $ctrl = this;
 
-    //PreDefined Callback;
+  //PreDefined Callback;
 
-    this.$onInit = () => {
-    };
+  this.$onInit = () => {
+  };
 
-    this.$onChanges = changes => {
-      $ctrl.item === changes.item.currentValue;
-    };
+  this.$onChanges = changes => {
+    $ctrl.item === changes.item.currentValue;
+  };
 
-    this.$onDestroy = () => {
-    };
+  this.$onDestroy = () => {
+  };
 
-    //TODO IMPLEMENTS
-
+  //TODO IMPLEMENTS
 }

@@ -4,6 +4,7 @@ var yeoman = require('yeoman-generator');
 var util = require('util');
 var ngUtil = require('../util');
 var ScriptBase = require('../script-base.js');
+var moduleUtil = require('../app/moduleUtil.js');
 
 var Generator = module.exports = function Generator() {
   ScriptBase.apply(this, arguments);
@@ -23,17 +24,23 @@ Generator.prototype.askFor = function askFor() {
     {
       name: 'scriptAppName',
       message: 'What\'s your module name?',
-      default: self.scriptAppName
+      default: function (props) {
+        return moduleUtil.findFolderModuleName(props.dir);
+      }
     }
   ];
 
   this.prompt(prompts, function (props) {
-    this.dir = path.join(props.dir, this.name);
+    var basePath = this.config.get('basePath');
+    this.dir = props.dir.indexOf(basePath) === 0 ?
+      path.join(props.dir, this.name) :
+      path.join(basePath, props.dir, this.name);
     this.scriptAppName = props.scriptAppName;
     done();
   }.bind(this));
 };
 
 Generator.prototype.createFiles = function createFiles() {
+  this.moduleUtil = moduleUtil;
   ngUtil.copyTemplates(this, 'controller');
 };

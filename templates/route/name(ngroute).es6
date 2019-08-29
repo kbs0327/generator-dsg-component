@@ -1,12 +1,12 @@
-angular
-  .module('<%= scriptAppName %>')
+import template from './<%= name %>.html';
+<%= moduleUtil.makeDeclareTemplate(scriptAppName) %>
   .config(Config);
 
 /* @ngInject */
 function Config($routeProvider) {
-    $routeProvider
-        .when('<%= route %>', {
-            templateUrl: '<%= htmlUrl %>',
-            controller: '<%= classedName %>Ctrl'
-        });
+  $routeProvider
+    .when('<%= route %>', {
+      template,
+      controller: '<%= classedName %>Ctrl'
+    });
 }

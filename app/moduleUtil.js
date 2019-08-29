@@ -32,24 +32,57 @@ const modulePathMap = {
 const moduleRealNameMap = {
   'appModule': 'doorayWebApp',
   'calendarModule': 'doorayWebApp.calendar',
+  'commonModule': 'doorayWebApp.common',
+  'translationModule': 'doorayWebApp.translation',
   'contactsModule': 'doorayWebApp.contact',
   'driveModule': 'doorayWebApp.drive',
+  'componentsModule': 'doorayWebApp.components',
   'editorModule': 'doorayWebApp.editor',
-  'homeModule': 'doorayWebApp.home',
+  'homeModule': 'doorayWebApp.home\', [\'validation',
+  'layoutModule': 'doorayWebApp.layout',
   'lazyloadModule': 'doorayWebApp.lazyload',
-  'presentationModule': 'doorayWebApp.presentation',
   'logModule': 'doorayWebApp.log',
-  'renderModule': 'doorayWebApp.render',
-  'settingModule': 'doorayWebApp.settings',
-  'shareModule': 'doorayWebApp.share',
-  'signupModule': 'doorayWebApp.signup',
-  'streamModule': 'doorayWebApp.stream',
   'mailModule': 'doorayWebApp.mail',
   'popupModule': 'doorayWebApp.popup',
+  'presentationModule': 'doorayWebApp.presentation',
+  'renderModule': 'doorayWebApp.render',
+  'projectModule': 'doorayWebApp.project',
+  'settingModule': 'doorayWebApp.settings',
+  'shareModule': 'doorayWebApp.share',
+  'sharedLinkModule': 'doorayWebApp.sharedLink',
+  'signupModule': 'doorayWebApp.signup\', [\'validation',
+  'streamModule': 'doorayWebApp.stream',
   'wikiModule': 'doorayWebApp.wiki',
   'settingAdminModule': 'doorayWebApp.setting.admin',
   'settingCommonModule': 'doorayWebApp.setting.common',
   'settingUserModule': 'doorayWebApp.setting.user'
+};
+
+const folderModuleNameMap = {
+  'calendar': 'calendarModule',
+  'common': 'commonModule',
+  'contacts': 'contactsModule',
+  'drive': 'driveModule',
+  'editor': 'editorModule',
+  'home': 'homeModule',
+  'layout': 'layoutModule',
+  'lazyload': 'lazyloadModule',
+  'components': 'componentsModule',
+  'log': 'logModule',
+  'mail': 'mailModule',
+  'presentation': 'presentationModule',
+  'render': 'renderModule',
+  'project': 'projectModule',
+  'setting': 'settingModule',
+  'share': 'shareModule',
+  'popup': 'popupModule',
+  'signup': 'signupModule',
+  'stream': 'streamModule',
+  'wiki': 'wikiModule',
+  'sharedLink': 'sharedLinkModule',
+  'setting/admin': 'settingAdminModule',
+  'setting/common': 'settingCommonModule',
+  'setting/user': 'settingUserModule'
 };
 
 function findModulePath(moduleName) {
@@ -60,12 +93,21 @@ function findModuleRealName(moduleName) {
   return moduleRealNameMap[moduleName] || moduleName;
 }
 
+function findFolderModuleName(path) {
+  var folder = path.replace(/(?:app\/modules\/)?(\w+).*$/, '$1');
+  if (folder === 'setting') {
+    folder = path.replace(/(?:app\/modules\/)?(\w+\/\w+).*$/, '$1');
+    return folderModuleNameMap[folder] || folderModuleNameMap.setting;
+  }
+  return folderModuleNameMap[folder];
+}
+
 function makeDeclareTemplate(moduleName) {
   const modulePath = findModulePath(moduleName);
   if (modulePath) {
     return 'import %MODULE_NAME% from \'%MODULE_PATH%\';\n\n%MODULE_NAME%'
       .replace(/%MODULE_NAME%/g, moduleName)
-      .replace(/%MODULE_NAME%/g, modulePath);
+      .replace(/%MODULE_PATH%/g, modulePath);
   }
   return 'angular\n\t.module(\'%MODULE_NAME%\')';
 }
@@ -73,5 +115,6 @@ function makeDeclareTemplate(moduleName) {
 module.exports = {
   findModulePath: findModulePath,
   findModuleRealName: findModuleRealName,
+  findFolderModuleName: findFolderModuleName,
   makeDeclareTemplate: makeDeclareTemplate
 };

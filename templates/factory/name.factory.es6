@@ -1,21 +1,20 @@
-angular
-    .module('<%= scriptAppName %>')
-    .factory('<%= cameledName %>', <%= classedName %>);
+<%= moduleUtil.makeDeclareTemplate(scriptAppName) %>
+  .factory('<%= cameledName %>', <%= classedName %>);
 
 /* @ngInject */
 function <%= classedName %>() {
-    // Service logic
-    // ...
+  // Service logic
+  // ...
 
-    let meaningOfLife = 99;
+  const meaningOfLife = 99;
 
-    // Public API here
-    return {
-        someMethod
-    };
+  // Public API here
+  return {
+    someMethod
+  };
 
-    // Public API Implements
-    function someMethod() {
-        return meaningOfLife;
-    }
+  // Public API Implements
+  function someMethod() {
+    return meaningOfLife;
+  }
 }
