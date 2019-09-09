@@ -105,7 +105,7 @@ function findFolderModuleName(path) {
 function makeDeclareTemplate(moduleName) {
   const modulePath = findModulePath(moduleName);
   if (modulePath) {
-    return 'import %MODULE_NAME% from \'%MODULE_PATH%\';\n\n%MODULE_NAME%'
+    return 'import {%MODULE_NAME%} from \'%MODULE_PATH%\';\n\n%MODULE_NAME%'
       .replace(/%MODULE_NAME%/g, moduleName)
       .replace(/%MODULE_PATH%/g, modulePath);
   }
