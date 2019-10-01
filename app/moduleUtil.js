@@ -65,7 +65,7 @@ const folderModuleNameMap = {
   'drive': 'driveModule',
   'editor': 'editorModule',
   'home': 'homeModule',
-  'layout': 'layoutModule',
+  'layouts': 'layoutModule',
   'lazyload': 'lazyloadModule',
   'components': 'componentsModule',
   'log': 'logModule',
